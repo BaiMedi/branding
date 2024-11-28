@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checklist para Crear un Branding Consistente</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            background-color: #f9f9f9;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        h1, h2 {
+            color: #00344B;
+        }
+        textarea, button {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        .result {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #e1f5fe;
+            border: 1px solid #81d4fa;
+            border-radius: 5px;
+            color: #0277bd;
+            font-weight: bold;
+        }
+        .cta-container {
+            text-align: center;
+            margin-top: 30px;
+        }
+        .cta-container p {
+            color: #00344B;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .cta-container a {
+            display: inline-block;
+            background-color: #00DC42;
+            color: #ffffff;
+            text-decoration: none;
+            padding: 15px 25px;
+            border-radius: 5px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .cta-container a:hover {
+            background-color: #00c03a;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Checklist para Crear un Branding Consistente</h1>
+        <p>Evalúa y fortalece la consistencia de tu marca con esta checklist interactiva.</p>
+
+        <form id="branding-form">
+            <label for="core-values">¿Cuáles son los valores principales de tu marca?</label>
+            <textarea id="core-values" placeholder="Ejemplo: Innovación, calidad, accesibilidad"></textarea>
+
+            <label for="visual-identity">Describe los elementos visuales de tu marca (colores, tipografía, logotipo):</label>
+            <textarea id="visual-identity" placeholder="Ejemplo: Colores azul y blanco, tipografía Sans Serif"></textarea>
+
+            <button type="button" onclick="generateBrandingChecklist()">Generar Checklist</button>
+        </form>
+
+        <div id="result" class="result" style="display: none;"></div>
+
+        <div class="cta-container">
+            <p>¿CAMPO DE JUEGO O MINA DE ORO?</p>
+            <a href="https://klicana.work/ykEi0H" target="_blank">INSCRIBIRME A MISIÓN GESTOR REDES SOCIALES</a>
+        </div>
+    </div>
+
+    <script>
+        function generateBrandingChecklist() {
+            const values = document.getElementById("core-values").value.trim();
+            const identity = document.getElementById("visual-identity").value.trim();
+
+            if (!values || !identity) {
+                document.getElementById("result").style.display = "block";
+                document.getElementById("result").textContent = "Por favor, completa todos los campos para generar tu checklist.";
+                return;
+            }
+
+            const checklist = `
+                <strong>Checklist de branding consistente:</strong><br>
+                - Valores de la marca: "${values}".<br>
+                - Elementos visuales: "${identity}".<br>
+                <strong>Recomendación:</strong> Asegúrate de que estos valores y elementos estén reflejados en todos tus canales de comunicación.
+            `;
+
+            document.getElementById("result").style.display = "block";
+            document.getElementById("result").innerHTML = checklist;
+        }
+    </script>
+</body>
+</html>
